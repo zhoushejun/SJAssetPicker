@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		CF8904B11B47150E00C74E75 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8904B01B47150E00C74E75 /* main.m */; };
 		CF8904B41B47150E00C74E75 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8904B31B47150E00C74E75 /* AppDelegate.m */; };
-		CF8904B71B47150E00C74E75 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8904B61B47150E00C74E75 /* ViewController.m */; };
 		CF8904BA1B47150E00C74E75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF8904B81B47150E00C74E75 /* Main.storyboard */; };
 		CF8904BC1B47150E00C74E75 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF8904BB1B47150E00C74E75 /* Images.xcassets */; };
 		CF8904BF1B47150E00C74E75 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8904BD1B47150E00C74E75 /* LaunchScreen.xib */; };
 		CF8904CB1B47150E00C74E75 /* SJAssetPickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8904CA1B47150E00C74E75 /* SJAssetPickerTests.m */; };
+		CF8904E71B47171A00C74E75 /* SJAssetPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8904E61B47171A00C74E75 /* SJAssetPickerViewController.m */; };
+		CF8904EA1B47174600C74E75 /* SJAssetGroupsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8904E91B47174600C74E75 /* SJAssetGroupsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +33,16 @@
 		CF8904B01B47150E00C74E75 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CF8904B21B47150E00C74E75 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CF8904B31B47150E00C74E75 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CF8904B51B47150E00C74E75 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CF8904B61B47150E00C74E75 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CF8904B91B47150E00C74E75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF8904BB1B47150E00C74E75 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CF8904BE1B47150E00C74E75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CF8904C41B47150E00C74E75 /* SJAssetPickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SJAssetPickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF8904C91B47150E00C74E75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF8904CA1B47150E00C74E75 /* SJAssetPickerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJAssetPickerTests.m; sourceTree = "<group>"; };
+		CF8904E51B47171A00C74E75 /* SJAssetPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJAssetPickerViewController.h; sourceTree = "<group>"; };
+		CF8904E61B47171A00C74E75 /* SJAssetPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJAssetPickerViewController.m; sourceTree = "<group>"; };
+		CF8904E81B47174600C74E75 /* SJAssetGroupsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJAssetGroupsTableViewController.h; sourceTree = "<group>"; };
+		CF8904E91B47174600C74E75 /* SJAssetGroupsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJAssetGroupsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,7 @@
 		CF8904A21B47150E00C74E75 = {
 			isa = PBXGroup;
 			children = (
+				CF8904D41B47162D00C74E75 /* Classes */,
 				CF8904AD1B47150E00C74E75 /* SJAssetPicker */,
 				CF8904C71B47150E00C74E75 /* SJAssetPickerTests */,
 				CF8904AC1B47150E00C74E75 /* Products */,
@@ -83,8 +87,6 @@
 			children = (
 				CF8904B21B47150E00C74E75 /* AppDelegate.h */,
 				CF8904B31B47150E00C74E75 /* AppDelegate.m */,
-				CF8904B51B47150E00C74E75 /* ViewController.h */,
-				CF8904B61B47150E00C74E75 /* ViewController.m */,
 				CF8904B81B47150E00C74E75 /* Main.storyboard */,
 				CF8904BB1B47150E00C74E75 /* Images.xcassets */,
 				CF8904BD1B47150E00C74E75 /* LaunchScreen.xib */,
@@ -117,6 +119,113 @@
 				CF8904C91B47150E00C74E75 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CF8904D41B47162D00C74E75 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CF8904D51B47162D00C74E75 /* Core */,
+				CF8904D91B47162D00C74E75 /* UI */,
+				CF8904DC1B47162D00C74E75 /* Utilities */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CF8904D51B47162D00C74E75 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CF8904D61B47162D00C74E75 /* Model */,
+				CF8904D71B47162D00C74E75 /* Network */,
+				CF8904D81B47162D00C74E75 /* Service */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		CF8904D61B47162D00C74E75 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CF8904D71B47162D00C74E75 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CF8904D81B47162D00C74E75 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CF8904D91B47162D00C74E75 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CF8904DA1B47162D00C74E75 /* Controller */,
+				CF8904DB1B47162D00C74E75 /* View */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		CF8904DA1B47162D00C74E75 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CF8904E51B47171A00C74E75 /* SJAssetPickerViewController.h */,
+				CF8904E61B47171A00C74E75 /* SJAssetPickerViewController.m */,
+				CF8904E81B47174600C74E75 /* SJAssetGroupsTableViewController.h */,
+				CF8904E91B47174600C74E75 /* SJAssetGroupsTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CF8904DB1B47162D00C74E75 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CF8904DC1B47162D00C74E75 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CF8904DD1B47162D00C74E75 /* Category */,
+				CF8904DE1B47162D00C74E75 /* Define */,
+				CF8904DF1B47162D00C74E75 /* Tool */,
+				CF8904E01B47162D00C74E75 /* Vendor */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		CF8904DD1B47162D00C74E75 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		CF8904DE1B47162D00C74E75 /* Define */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Define;
+			sourceTree = "<group>";
+		};
+		CF8904DF1B47162D00C74E75 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		CF8904E01B47162D00C74E75 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vendor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +272,7 @@
 		CF8904A31B47150E00C74E75 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SJ;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = shejun.zhou;
 				TargetAttributes = {
@@ -219,7 +329,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF8904B71B47150E00C74E75 /* ViewController.m in Sources */,
+				CF8904E71B47171A00C74E75 /* SJAssetPickerViewController.m in Sources */,
+				CF8904EA1B47174600C74E75 /* SJAssetGroupsTableViewController.m in Sources */,
 				CF8904B41B47150E00C74E75 /* AppDelegate.m in Sources */,
 				CF8904B11B47150E00C74E75 /* main.m in Sources */,
 			);
@@ -299,7 +410,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -337,7 +448,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
