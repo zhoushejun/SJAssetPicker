@@ -142,4 +142,11 @@
                           failureBlock:^(NSError *error) {NSLog(@"There is an error");}];
 }
 
+- (IBAction)tappedFinishedItemAction:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
+
+
 @end

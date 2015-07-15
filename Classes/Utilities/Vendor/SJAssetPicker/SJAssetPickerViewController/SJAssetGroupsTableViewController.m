@@ -68,7 +68,7 @@
     NSDictionary *dic = [NSDictionary dictionaryWithDictionary:_groupsArray[indexPath.row]];
     NSString *groupName = [NSString stringWithFormat:@"%@", [dic objectForKey:@"name"]];
     
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SJAssetPicker" bundle:nil];
     SJAssetPickerViewController *VC = [storyboard instantiateViewControllerWithIdentifier:@"SJAssetPickerViewController"];
     //    VC.groupName = groupName;
     VC.title = groupName;
@@ -94,6 +94,11 @@
                             usingBlock:assetGroupEnumerator
                           failureBlock:^(NSError *error) {NSLog(@"There is an error");}];
     
+}
+
+
+- (IBAction)tappedCancelItemAction:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
