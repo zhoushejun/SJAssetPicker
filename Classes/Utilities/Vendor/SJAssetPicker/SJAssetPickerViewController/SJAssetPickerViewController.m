@@ -13,7 +13,7 @@
 @interface SJAssetPickerViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic, strong) ALAssetsLibrary *library;
-@property (nonatomic, strong) NSMutableArray *mutableArray;
+@property (nonatomic, strong) NSMutableArray *selectedAsstsArray;
 @property (nonatomic, strong) NSMutableArray *imageURL;
 @property (nonatomic, strong) NSMutableArray *imageArray;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -27,19 +27,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    _selectedAsstsArray = [[NSMutableArray alloc] init];
     _imageURL = [[NSMutableArray alloc] init];
     _imageArray = [[NSMutableArray alloc] init];
     [self loadAllPictures];
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-    [_mutableArray removeAllObjects];
-    [_imageURL removeAllObjects];
-    [_imageArray removeAllObjects];
-    _mutableArray = nil;
-    _imageURL = nil;
-    _imageArray = nil;
-    _library = nil;
+- (void)viewDidDisappear:(BOOL)animated {
+//    [_selectedAsstsArray removeAllObjects];
+//    [_imageURL removeAllObjects];
+//    [_imageArray removeAllObjects];
+//    _selectedAsstsArray = nil;
+//    _imageURL = nil;
+//    _imageArray = nil;
+//    _library = nil;
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSString *cachPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
@@ -55,7 +56,7 @@
             }
         }
     });
-    [super viewWillDisappear:animated];
+    [super viewDidDisappear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -72,10 +73,14 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellectionViewCellIdentifier" forIndexPath:indexPath];
     UIImageView *imageView = (UIImageView *)[cell viewWithTag:100];
-    
+    UIImageView *imgView = (UIImageView *)[cell viewWithTag:101];
+    imgView.hidden = YES;
     if (_imageArray.count > indexPath.row) {
         UIImage *image = _imageArray[indexPath.row];
         imageView.image = image;
+        if ([_selectedAsstsArray containsObject:indexPath]) {
+            imgView.hidden = NO;
+        }
     }else {
         NSURL *url = _imageURL[indexPath.row];
         [_library assetForURL:url
@@ -102,6 +107,12 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"%@", _imageURL[indexPath.row]);
+    if ([self.selectedAsstsArray containsObject:indexPath]) {
+        [self.selectedAsstsArray removeObject:indexPath];
+    }else {
+        [self.selectedAsstsArray addObject:indexPath];
+    }
+    [collectionView reloadData];
 }
 
 -(void)loadAllPictures{
@@ -144,7 +155,11 @@
 
 - (IBAction)tappedFinishedItemAction:(id)sender {
     [self dismissViewControllerAnimated:YES completion:^{
-        
+        NSMutableArray *selectedImageArray = [[NSMutableArray alloc] init];
+        for (NSIndexPath *indexPath in _selectedAsstsArray) {
+            [selectedImageArray addObject:_imageArray[indexPath.row]];
+        }
+        NSLog(@"selectedImageArray.count:%lu", (unsigned long)selectedImageArray.count);
     }];
 }
 

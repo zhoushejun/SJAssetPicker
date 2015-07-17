@@ -73,12 +73,21 @@
                                                 <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bA1-n8-ynd">
                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                 </imageView>
+                                                <imageView userInteractionEnabled="NO" tag="101" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_img_check_sel" translatesAutoresizingMaskIntoConstraints="NO" id="IpQ-B7-U6N">
+                                                    <rect key="frame" x="70" y="0.0" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="FEF-rr-V99"/>
+                                                        <constraint firstAttribute="height" constant="30" id="s2o-v6-yre"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
                                             <constraint firstItem="bA1-n8-ynd" firstAttribute="leading" secondItem="n6p-Ov-8fl" secondAttribute="leading" id="E2s-cA-e5j"/>
+                                            <constraint firstItem="IpQ-B7-U6N" firstAttribute="top" secondItem="n6p-Ov-8fl" secondAttribute="top" id="Ll4-9e-YWH"/>
                                             <constraint firstAttribute="trailing" secondItem="bA1-n8-ynd" secondAttribute="trailing" id="Uyz-6h-sSh"/>
+                                            <constraint firstAttribute="trailing" secondItem="IpQ-B7-U6N" secondAttribute="trailing" id="er3-Jx-KsK"/>
                                             <constraint firstItem="bA1-n8-ynd" firstAttribute="top" secondItem="n6p-Ov-8fl" secondAttribute="top" id="gOf-hi-EBv"/>
                                             <constraint firstAttribute="bottom" secondItem="bA1-n8-ynd" secondAttribute="bottom" id="vuZ-Xf-orc"/>
                                         </constraints>
@@ -138,4 +147,7 @@
             <point key="canvasLocation" x="-779" y="212"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_img_check_sel" width="30" height="30"/>
+    </resources>
 </document>
