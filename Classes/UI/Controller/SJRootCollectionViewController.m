@@ -81,6 +81,7 @@ static NSString * const SJCollectionViewAddCellReuseIdentifier = @"SJCollectionV
     if (indexPath.row == _arrayPhotos.count) {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SJAssetPicker" bundle:nil];
         UINavigationController *groupsVC = [storyboard instantiateViewControllerWithIdentifier:@"SJAssetPickerNavigationController"];
+        
         [self presentViewController:groupsVC animated:YES completion:nil];
     }
 }
