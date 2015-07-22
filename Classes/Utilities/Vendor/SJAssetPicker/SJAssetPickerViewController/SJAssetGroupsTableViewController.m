@@ -9,11 +9,12 @@
 #import "SJAssetGroupsTableViewController.h"
 #import "SJAssetPickerViewController.h"
 #import <AssetsLibrary/AssetsLibrary.h>
+#import "SJAssetPickerModel.h"
 
 @interface SJAssetGroupsTableViewController ()
 
 @property (nonatomic, strong) NSMutableArray *groupsArray;
-@property (nonatomic, strong) ALAssetsLibrary *library;
+@property (nonatomic, strong) SJAssetPickerModel *model;
 
 @end
 
@@ -29,7 +30,8 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.tableView.tableFooterView = [[UIView alloc] init];
     _groupsArray = [[NSMutableArray alloc] init];
-    _library = [[ALAssetsLibrary alloc] init];
+    _model = [SJAssetPickerModel shareManager];
+    _model.selectedAssetsArrayTemp = [_model.selectedAssetsArray mutableCopy];
     [self loadGroupsNameAndIcon];
 }
 
@@ -87,10 +89,16 @@
             [dic setObject:img      forKey:@"image"];
             [_groupsArray addObject:dic];
             [self.tableView reloadData];
+            if ([strName isEqualToString:@"Camera Roll"]) {
+                UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SJAssetPicker" bundle:nil];
+                SJAssetPickerViewController *VC = [storyboard instantiateViewControllerWithIdentifier:@"SJAssetPickerViewController"];
+                VC.title = strName;
+                [self.navigationController pushViewController:VC animated:NO];
+            }
         }
     };
     
-    [_library enumerateGroupsWithTypes:ALAssetsGroupAll
+    [_model.library enumerateGroupsWithTypes:ALAssetsGroupAll
                             usingBlock:assetGroupEnumerator
                           failureBlock:^(NSError *error) {NSLog(@"There is an error");}];
     
@@ -98,6 +106,7 @@
 
 
 - (IBAction)tappedCancelItemAction:(id)sender {
+    [_model.selectedAssetsArrayTemp removeAllObjects];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
