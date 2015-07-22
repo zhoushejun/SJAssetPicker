@@ -23,7 +23,7 @@
 - (instancetype)init {
     if (self = [super init]) {
         _selectedAssetsArray = [[NSMutableArray alloc] init];
-        _selectedURLsArray = [[NSMutableArray alloc] init];
+        _selectedAssetsArrayTemp = [[NSMutableArray alloc] init];
         _library = [[ALAssetsLibrary alloc] init];
     }
     return self;

@@ -21,9 +21,9 @@
  */
 @interface SJAssetPickerModel : NSObject
 
-@property (nonatomic, strong) NSMutableArray *selectedAssetsArray;
-@property (nonatomic, strong) NSMutableArray *selectedURLsArray;
-@property (nonatomic, strong) ALAssetsLibrary *library;
+@property (nonatomic, strong) NSMutableArray *selectedAssetsArray;      ///< 确认选择的照片
+@property (nonatomic, strong) NSMutableArray *selectedAssetsArrayTemp;  ///< 临时选择的照片
+@property (nonatomic, strong) ALAssetsLibrary *library;                 ///< 相册库对象
 
 + (SJAssetPickerModel *)shareManager;
 

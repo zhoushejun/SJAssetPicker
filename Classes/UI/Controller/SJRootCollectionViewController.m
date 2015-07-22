@@ -8,10 +8,13 @@
 
 #import "SJRootCollectionViewController.h"
 #import "SJAssetGroupsTableViewController.h"
+#import <AssetsLibrary/AssetsLibrary.h>
+
+#define kUpdateAssets @"UpdateAssets"
 
 @interface SJRootCollectionViewController ()
 
-@property (nonatomic, strong) NSMutableArray *arrayPhotos;
+@property (nonatomic, strong) NSMutableArray *arrayAssets;
 
 @end
 
@@ -27,11 +30,12 @@ static NSString * const SJCollectionViewAddCellReuseIdentifier = @"SJCollectionV
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
-    _arrayPhotos = [[NSMutableArray alloc] init];
+    _arrayAssets = [[NSMutableArray alloc] init];
 //    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:SJCollectionViewPhotoCellReuseIdentifier];
 //    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:SJCollectionViewAddCellReuseIdentifier];
     
     // Do any additional setup after loading the view.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(uploadAssets:) name:kUpdateAssets object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,17 +61,19 @@ static NSString * const SJCollectionViewAddCellReuseIdentifier = @"SJCollectionV
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [_arrayPhotos count] + 1;
+    return [_arrayAssets count] + 1;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = nil;
-    if (indexPath.row == _arrayPhotos.count) {
+    if (indexPath.row == _arrayAssets.count) {
         cell = [collectionView dequeueReusableCellWithReuseIdentifier:SJCollectionViewAddCellReuseIdentifier forIndexPath:indexPath];
 
     }else {
         cell = [collectionView dequeueReusableCellWithReuseIdentifier:SJCollectionViewPhotoCellReuseIdentifier forIndexPath:indexPath];
-
+        ALAsset *result = [_arrayAssets objectAtIndex:indexPath.row];
+        UIImageView *imageView = (UIImageView *)[cell viewWithTag:100];
+        imageView.image = [UIImage imageWithCGImage:result.thumbnail];
     }
     
     // Configure the cell
@@ -78,7 +84,7 @@ static NSString * const SJCollectionViewAddCellReuseIdentifier = @"SJCollectionV
 #pragma mark <UICollectionViewDelegate>
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == _arrayPhotos.count) {
+    if (indexPath.row == _arrayAssets.count) {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SJAssetPicker" bundle:nil];
         UINavigationController *groupsVC = [storyboard instantiateViewControllerWithIdentifier:@"SJAssetPickerNavigationController"];
         
@@ -86,5 +92,11 @@ static NSString * const SJCollectionViewAddCellReuseIdentifier = @"SJCollectionV
     }
 }
 
+- (void)uploadAssets:(NSNotification *)notification {
+    NSLog(@"notification:%@", notification);
+    [_arrayAssets removeAllObjects];
+    _arrayAssets = [[NSMutableArray alloc] initWithArray:notification.object];
+    [self.collectionView reloadData];
+}
 
 @end
