@@ -7,18 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CF72A8511B5D28A400F7ED85 /* SJAssetPickerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF72A8501B5D28A400F7ED85 /* SJAssetPickerModel.m */; };
-		CF7B16741B56B983009476AC /* SJAssetPickerResources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF7B16731B56B983009476AC /* SJAssetPickerResources.xcassets */; };
 		CF8904B11B47150E00C74E75 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8904B01B47150E00C74E75 /* main.m */; };
 		CF8904B41B47150E00C74E75 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8904B31B47150E00C74E75 /* AppDelegate.m */; };
 		CF8904BA1B47150E00C74E75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF8904B81B47150E00C74E75 /* Main.storyboard */; };
 		CF8904BC1B47150E00C74E75 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF8904BB1B47150E00C74E75 /* Images.xcassets */; };
 		CF8904BF1B47150E00C74E75 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8904BD1B47150E00C74E75 /* LaunchScreen.xib */; };
 		CF8904CB1B47150E00C74E75 /* SJAssetPickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8904CA1B47150E00C74E75 /* SJAssetPickerTests.m */; };
-		CF8904FC1B4773A600C74E75 /* SJAssetPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF8904F61B4773A600C74E75 /* SJAssetPicker.storyboard */; };
-		CF8904FD1B4773A600C74E75 /* SJAssetGroupsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8904F91B4773A600C74E75 /* SJAssetGroupsTableViewController.m */; };
-		CF8904FE1B4773A600C74E75 /* SJAssetPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8904FB1B4773A600C74E75 /* SJAssetPickerViewController.m */; };
-		CF8905011B47791900C74E75 /* SJRootCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8905001B47791900C74E75 /* SJRootCollectionViewController.m */; };
+		CFFDDEDF1B61D410000C6E8F /* SJRootCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFDDEDE1B61D410000C6E8F /* SJRootCollectionViewController.m */; };
+		CFFDDEF11B61D427000C6E8F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = CFFDDEE21B61D427000C6E8F /* LICENSE */; };
+		CFFDDEF21B61D427000C6E8F /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = CFFDDEE31B61D427000C6E8F /* README.md */; };
+		CFFDDEF31B61D427000C6E8F /* SJAssetPickerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFDDEE61B61D427000C6E8F /* SJAssetPickerModel.m */; };
+		CFFDDEF41B61D427000C6E8F /* SJAssetPickerResources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFFDDEE81B61D427000C6E8F /* SJAssetPickerResources.xcassets */; };
+		CFFDDEF51B61D427000C6E8F /* SJAssetPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFFDDEEA1B61D427000C6E8F /* SJAssetPicker.storyboard */; };
+		CFFDDEF61B61D427000C6E8F /* SJAssetGroupsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFDDEED1B61D427000C6E8F /* SJAssetGroupsTableViewController.m */; };
+		CFFDDEF71B61D427000C6E8F /* SJAssetPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFDDEEF1B61D427000C6E8F /* SJAssetPickerViewController.m */; };
+		CFFDDEF81B61D427000C6E8F /* SJAssetPicker.podspec in Resources */ = {isa = PBXBuildFile; fileRef = CFFDDEF01B61D427000C6E8F /* SJAssetPicker.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,9 +35,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CF72A84F1B5D28A400F7ED85 /* SJAssetPickerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJAssetPickerModel.h; sourceTree = "<group>"; };
-		CF72A8501B5D28A400F7ED85 /* SJAssetPickerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJAssetPickerModel.m; sourceTree = "<group>"; };
-		CF7B16731B56B983009476AC /* SJAssetPickerResources.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SJAssetPickerResources.xcassets; sourceTree = "<group>"; };
 		CF8904AB1B47150E00C74E75 /* SJAssetPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SJAssetPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF8904AF1B47150E00C74E75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF8904B01B47150E00C74E75 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -46,13 +46,19 @@
 		CF8904C41B47150E00C74E75 /* SJAssetPickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SJAssetPickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF8904C91B47150E00C74E75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF8904CA1B47150E00C74E75 /* SJAssetPickerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJAssetPickerTests.m; sourceTree = "<group>"; };
-		CF8904F61B4773A600C74E75 /* SJAssetPicker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SJAssetPicker.storyboard; sourceTree = "<group>"; };
-		CF8904F81B4773A600C74E75 /* SJAssetGroupsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJAssetGroupsTableViewController.h; sourceTree = "<group>"; };
-		CF8904F91B4773A600C74E75 /* SJAssetGroupsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJAssetGroupsTableViewController.m; sourceTree = "<group>"; };
-		CF8904FA1B4773A600C74E75 /* SJAssetPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJAssetPickerViewController.h; sourceTree = "<group>"; };
-		CF8904FB1B4773A600C74E75 /* SJAssetPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJAssetPickerViewController.m; sourceTree = "<group>"; };
-		CF8904FF1B47791900C74E75 /* SJRootCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJRootCollectionViewController.h; sourceTree = "<group>"; };
-		CF8905001B47791900C74E75 /* SJRootCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJRootCollectionViewController.m; sourceTree = "<group>"; };
+		CFFDDEDD1B61D410000C6E8F /* SJRootCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJRootCollectionViewController.h; sourceTree = "<group>"; };
+		CFFDDEDE1B61D410000C6E8F /* SJRootCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJRootCollectionViewController.m; sourceTree = "<group>"; };
+		CFFDDEE21B61D427000C6E8F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		CFFDDEE31B61D427000C6E8F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CFFDDEE51B61D427000C6E8F /* SJAssetPickerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJAssetPickerModel.h; sourceTree = "<group>"; };
+		CFFDDEE61B61D427000C6E8F /* SJAssetPickerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJAssetPickerModel.m; sourceTree = "<group>"; };
+		CFFDDEE81B61D427000C6E8F /* SJAssetPickerResources.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SJAssetPickerResources.xcassets; sourceTree = "<group>"; };
+		CFFDDEEA1B61D427000C6E8F /* SJAssetPicker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SJAssetPicker.storyboard; sourceTree = "<group>"; };
+		CFFDDEEC1B61D427000C6E8F /* SJAssetGroupsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJAssetGroupsTableViewController.h; sourceTree = "<group>"; };
+		CFFDDEED1B61D427000C6E8F /* SJAssetGroupsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJAssetGroupsTableViewController.m; sourceTree = "<group>"; };
+		CFFDDEEE1B61D427000C6E8F /* SJAssetPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJAssetPickerViewController.h; sourceTree = "<group>"; };
+		CFFDDEEF1B61D427000C6E8F /* SJAssetPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJAssetPickerViewController.m; sourceTree = "<group>"; };
+		CFFDDEF01B61D427000C6E8F /* SJAssetPicker.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SJAssetPicker.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,19 +79,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CF72A84E1B5D288D00F7ED85 /* SJAssetPickerModel */ = {
-			isa = PBXGroup;
-			children = (
-				CF72A84F1B5D28A400F7ED85 /* SJAssetPickerModel.h */,
-				CF72A8501B5D28A400F7ED85 /* SJAssetPickerModel.m */,
-			);
-			path = SJAssetPickerModel;
-			sourceTree = "<group>";
-		};
 		CF8904A21B47150E00C74E75 = {
 			isa = PBXGroup;
 			children = (
-				CF8904D41B47162D00C74E75 /* Classes */,
+				CFFDDEE01B61D427000C6E8F /* Vendor */,
+				CFFDDEDB1B61D410000C6E8F /* Classes */,
 				CF8904AD1B47150E00C74E75 /* SJAssetPicker */,
 				CF8904C71B47150E00C74E75 /* SJAssetPickerTests */,
 				CF8904AC1B47150E00C74E75 /* Products */,
@@ -140,146 +138,77 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CF8904D41B47162D00C74E75 /* Classes */ = {
+		CFFDDEDB1B61D410000C6E8F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				CF8904D51B47162D00C74E75 /* Core */,
-				CF8904D91B47162D00C74E75 /* UI */,
-				CF8904DC1B47162D00C74E75 /* Utilities */,
+				CFFDDEDC1B61D410000C6E8F /* Controller */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		CF8904D51B47162D00C74E75 /* Core */ = {
+		CFFDDEDC1B61D410000C6E8F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CF8904D61B47162D00C74E75 /* Model */,
-				CF8904D71B47162D00C74E75 /* Network */,
-				CF8904D81B47162D00C74E75 /* Service */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		CF8904D61B47162D00C74E75 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		CF8904D71B47162D00C74E75 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		CF8904D81B47162D00C74E75 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Service;
-			sourceTree = "<group>";
-		};
-		CF8904D91B47162D00C74E75 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				CF8904DA1B47162D00C74E75 /* Controller */,
-				CF8904DB1B47162D00C74E75 /* View */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
-		CF8904DA1B47162D00C74E75 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				CF8904FF1B47791900C74E75 /* SJRootCollectionViewController.h */,
-				CF8905001B47791900C74E75 /* SJRootCollectionViewController.m */,
+				CFFDDEDD1B61D410000C6E8F /* SJRootCollectionViewController.h */,
+				CFFDDEDE1B61D410000C6E8F /* SJRootCollectionViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		CF8904DB1B47162D00C74E75 /* View */ = {
+		CFFDDEE01B61D427000C6E8F /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		CF8904DC1B47162D00C74E75 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				CF8904DD1B47162D00C74E75 /* Category */,
-				CF8904DE1B47162D00C74E75 /* Define */,
-				CF8904DF1B47162D00C74E75 /* Tool */,
-				CF8904E01B47162D00C74E75 /* Vendor */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
-		CF8904DD1B47162D00C74E75 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
-		CF8904DE1B47162D00C74E75 /* Define */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Define;
-			sourceTree = "<group>";
-		};
-		CF8904DF1B47162D00C74E75 /* Tool */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tool;
-			sourceTree = "<group>";
-		};
-		CF8904E01B47162D00C74E75 /* Vendor */ = {
-			isa = PBXGroup;
-			children = (
-				CF8904F31B4773A600C74E75 /* SJAssetPicker */,
+				CFFDDEE11B61D427000C6E8F /* SJAssetPicker */,
+				CFFDDEF01B61D427000C6E8F /* SJAssetPicker.podspec */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
 		};
-		CF8904F31B4773A600C74E75 /* SJAssetPicker */ = {
+		CFFDDEE11B61D427000C6E8F /* SJAssetPicker */ = {
 			isa = PBXGroup;
 			children = (
-				CF72A84E1B5D288D00F7ED85 /* SJAssetPickerModel */,
-				CF8904F41B4773A600C74E75 /* SJAssetPickerResources */,
-				CF8904F51B4773A600C74E75 /* SJAssetPickerStoryboard */,
-				CF8904F71B4773A600C74E75 /* SJAssetPickerViewController */,
+				CFFDDEE21B61D427000C6E8F /* LICENSE */,
+				CFFDDEE31B61D427000C6E8F /* README.md */,
+				CFFDDEE41B61D427000C6E8F /* SJAssetPickerModel */,
+				CFFDDEE71B61D427000C6E8F /* SJAssetPickerResources */,
+				CFFDDEE91B61D427000C6E8F /* SJAssetPickerStoryboard */,
+				CFFDDEEB1B61D427000C6E8F /* SJAssetPickerViewController */,
 			);
 			path = SJAssetPicker;
 			sourceTree = "<group>";
 		};
-		CF8904F41B4773A600C74E75 /* SJAssetPickerResources */ = {
+		CFFDDEE41B61D427000C6E8F /* SJAssetPickerModel */ = {
 			isa = PBXGroup;
 			children = (
-				CF7B16731B56B983009476AC /* SJAssetPickerResources.xcassets */,
+				CFFDDEE51B61D427000C6E8F /* SJAssetPickerModel.h */,
+				CFFDDEE61B61D427000C6E8F /* SJAssetPickerModel.m */,
+			);
+			path = SJAssetPickerModel;
+			sourceTree = "<group>";
+		};
+		CFFDDEE71B61D427000C6E8F /* SJAssetPickerResources */ = {
+			isa = PBXGroup;
+			children = (
+				CFFDDEE81B61D427000C6E8F /* SJAssetPickerResources.xcassets */,
 			);
 			path = SJAssetPickerResources;
 			sourceTree = "<group>";
 		};
-		CF8904F51B4773A600C74E75 /* SJAssetPickerStoryboard */ = {
+		CFFDDEE91B61D427000C6E8F /* SJAssetPickerStoryboard */ = {
 			isa = PBXGroup;
 			children = (
-				CF8904F61B4773A600C74E75 /* SJAssetPicker.storyboard */,
+				CFFDDEEA1B61D427000C6E8F /* SJAssetPicker.storyboard */,
 			);
 			path = SJAssetPickerStoryboard;
 			sourceTree = "<group>";
 		};
-		CF8904F71B4773A600C74E75 /* SJAssetPickerViewController */ = {
+		CFFDDEEB1B61D427000C6E8F /* SJAssetPickerViewController */ = {
 			isa = PBXGroup;
 			children = (
-				CF8904F81B4773A600C74E75 /* SJAssetGroupsTableViewController.h */,
-				CF8904F91B4773A600C74E75 /* SJAssetGroupsTableViewController.m */,
-				CF8904FA1B4773A600C74E75 /* SJAssetPickerViewController.h */,
-				CF8904FB1B4773A600C74E75 /* SJAssetPickerViewController.m */,
+				CFFDDEEC1B61D427000C6E8F /* SJAssetGroupsTableViewController.h */,
+				CFFDDEED1B61D427000C6E8F /* SJAssetGroupsTableViewController.m */,
+				CFFDDEEE1B61D427000C6E8F /* SJAssetPickerViewController.h */,
+				CFFDDEEF1B61D427000C6E8F /* SJAssetPickerViewController.m */,
 			);
 			path = SJAssetPickerViewController;
 			sourceTree = "<group>";
@@ -365,10 +294,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFFDDEF51B61D427000C6E8F /* SJAssetPicker.storyboard in Resources */,
+				CFFDDEF81B61D427000C6E8F /* SJAssetPicker.podspec in Resources */,
 				CF8904BA1B47150E00C74E75 /* Main.storyboard in Resources */,
-				CF7B16741B56B983009476AC /* SJAssetPickerResources.xcassets in Resources */,
+				CFFDDEF41B61D427000C6E8F /* SJAssetPickerResources.xcassets in Resources */,
 				CF8904BF1B47150E00C74E75 /* LaunchScreen.xib in Resources */,
-				CF8904FC1B4773A600C74E75 /* SJAssetPicker.storyboard in Resources */,
+				CFFDDEF11B61D427000C6E8F /* LICENSE in Resources */,
 				CF8904BC1B47150E00C74E75 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,12 +318,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFFDDEDF1B61D410000C6E8F /* SJRootCollectionViewController.m in Sources */,
 				CF8904B41B47150E00C74E75 /* AppDelegate.m in Sources */,
-				CF72A8511B5D28A400F7ED85 /* SJAssetPickerModel.m in Sources */,
-				CF8905011B47791900C74E75 /* SJRootCollectionViewController.m in Sources */,
+				CFFDDEF71B61D427000C6E8F /* SJAssetPickerViewController.m in Sources */,
+				CFFDDEF21B61D427000C6E8F /* README.md in Sources */,
 				CF8904B11B47150E00C74E75 /* main.m in Sources */,
-				CF8904FE1B4773A600C74E75 /* SJAssetPickerViewController.m in Sources */,
-				CF8904FD1B4773A600C74E75 /* SJAssetGroupsTableViewController.m in Sources */,
+				CFFDDEF31B61D427000C6E8F /* SJAssetPickerModel.m in Sources */,
+				CFFDDEF61B61D427000C6E8F /* SJAssetGroupsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
