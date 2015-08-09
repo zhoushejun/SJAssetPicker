@@ -15,7 +15,6 @@
 		CF8904CB1B47150E00C74E75 /* SJAssetPickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8904CA1B47150E00C74E75 /* SJAssetPickerTests.m */; };
 		CFFDDEDF1B61D410000C6E8F /* SJRootCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFDDEDE1B61D410000C6E8F /* SJRootCollectionViewController.m */; };
 		CFFDDEF11B61D427000C6E8F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = CFFDDEE21B61D427000C6E8F /* LICENSE */; };
-		CFFDDEF21B61D427000C6E8F /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = CFFDDEE31B61D427000C6E8F /* README.md */; };
 		CFFDDEF31B61D427000C6E8F /* SJAssetPickerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFDDEE61B61D427000C6E8F /* SJAssetPickerModel.m */; };
 		CFFDDEF41B61D427000C6E8F /* SJAssetPickerResources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFFDDEE81B61D427000C6E8F /* SJAssetPickerResources.xcassets */; };
 		CFFDDEF51B61D427000C6E8F /* SJAssetPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFFDDEEA1B61D427000C6E8F /* SJAssetPicker.storyboard */; };
@@ -49,7 +48,6 @@
 		CFFDDEDD1B61D410000C6E8F /* SJRootCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJRootCollectionViewController.h; sourceTree = "<group>"; };
 		CFFDDEDE1B61D410000C6E8F /* SJRootCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJRootCollectionViewController.m; sourceTree = "<group>"; };
 		CFFDDEE21B61D427000C6E8F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		CFFDDEE31B61D427000C6E8F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CFFDDEE51B61D427000C6E8F /* SJAssetPickerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJAssetPickerModel.h; sourceTree = "<group>"; };
 		CFFDDEE61B61D427000C6E8F /* SJAssetPickerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJAssetPickerModel.m; sourceTree = "<group>"; };
 		CFFDDEE81B61D427000C6E8F /* SJAssetPickerResources.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SJAssetPickerResources.xcassets; sourceTree = "<group>"; };
@@ -168,7 +166,6 @@
 			isa = PBXGroup;
 			children = (
 				CFFDDEE21B61D427000C6E8F /* LICENSE */,
-				CFFDDEE31B61D427000C6E8F /* README.md */,
 				CFFDDEE41B61D427000C6E8F /* SJAssetPickerModel */,
 				CFFDDEE71B61D427000C6E8F /* SJAssetPickerResources */,
 				CFFDDEE91B61D427000C6E8F /* SJAssetPickerStoryboard */,
@@ -321,7 +318,6 @@
 				CFFDDEDF1B61D410000C6E8F /* SJRootCollectionViewController.m in Sources */,
 				CF8904B41B47150E00C74E75 /* AppDelegate.m in Sources */,
 				CFFDDEF71B61D427000C6E8F /* SJAssetPickerViewController.m in Sources */,
-				CFFDDEF21B61D427000C6E8F /* README.md in Sources */,
 				CF8904B11B47150E00C74E75 /* main.m in Sources */,
 				CFFDDEF31B61D427000C6E8F /* SJAssetPickerModel.m in Sources */,
 				CFFDDEF61B61D427000C6E8F /* SJAssetGroupsTableViewController.m in Sources */,
