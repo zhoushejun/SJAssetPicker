@@ -14,6 +14,12 @@
 		CFCD04591B76F774002AEACC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFCD04581B76F774002AEACC /* Images.xcassets */; };
 		CFCD045C1B76F774002AEACC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFCD045A1B76F774002AEACC /* LaunchScreen.xib */; };
 		CFCD04681B76F774002AEACC /* SJAssetPickerExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCD04671B76F774002AEACC /* SJAssetPickerExampleTests.m */; };
+		CFCD047F1B76F792002AEACC /* SJAssetPickerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCD04741B76F792002AEACC /* SJAssetPickerModel.m */; };
+		CFCD04801B76F792002AEACC /* ic_img_check_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFCD04761B76F792002AEACC /* ic_img_check_sel@2x.png */; };
+		CFCD04811B76F792002AEACC /* ic_img_check_sel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFCD04771B76F792002AEACC /* ic_img_check_sel@3x.png */; };
+		CFCD04821B76F792002AEACC /* SJAssetPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFCD04791B76F792002AEACC /* SJAssetPicker.storyboard */; };
+		CFCD04831B76F792002AEACC /* SJAssetGroupsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCD047C1B76F792002AEACC /* SJAssetGroupsTableViewController.m */; };
+		CFCD04841B76F792002AEACC /* SJAssetPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFCD047E1B76F792002AEACC /* SJAssetPickerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +46,15 @@
 		CFCD04611B76F774002AEACC /* SJAssetPickerExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SJAssetPickerExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFCD04661B76F774002AEACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFCD04671B76F774002AEACC /* SJAssetPickerExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJAssetPickerExampleTests.m; sourceTree = "<group>"; };
+		CFCD04731B76F792002AEACC /* SJAssetPickerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJAssetPickerModel.h; sourceTree = "<group>"; };
+		CFCD04741B76F792002AEACC /* SJAssetPickerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJAssetPickerModel.m; sourceTree = "<group>"; };
+		CFCD04761B76F792002AEACC /* ic_img_check_sel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_img_check_sel@2x.png"; sourceTree = "<group>"; };
+		CFCD04771B76F792002AEACC /* ic_img_check_sel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_img_check_sel@3x.png"; sourceTree = "<group>"; };
+		CFCD04791B76F792002AEACC /* SJAssetPicker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SJAssetPicker.storyboard; sourceTree = "<group>"; };
+		CFCD047B1B76F792002AEACC /* SJAssetGroupsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJAssetGroupsTableViewController.h; sourceTree = "<group>"; };
+		CFCD047C1B76F792002AEACC /* SJAssetGroupsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJAssetGroupsTableViewController.m; sourceTree = "<group>"; };
+		CFCD047D1B76F792002AEACC /* SJAssetPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJAssetPickerViewController.h; sourceTree = "<group>"; };
+		CFCD047E1B76F792002AEACC /* SJAssetPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJAssetPickerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +78,7 @@
 		CFCD043F1B76F774002AEACC = {
 			isa = PBXGroup;
 			children = (
+				CFCD04711B76F792002AEACC /* SJAssetPicker */,
 				CFCD044A1B76F774002AEACC /* SJAssetPickerExample */,
 				CFCD04641B76F774002AEACC /* SJAssetPickerExampleTests */,
 				CFCD04491B76F774002AEACC /* Products */,
@@ -117,6 +133,54 @@
 				CFCD04661B76F774002AEACC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CFCD04711B76F792002AEACC /* SJAssetPicker */ = {
+			isa = PBXGroup;
+			children = (
+				CFCD04721B76F792002AEACC /* SJAssetPickerModel */,
+				CFCD04751B76F792002AEACC /* SJAssetPickerResources */,
+				CFCD04781B76F792002AEACC /* SJAssetPickerStoryboard */,
+				CFCD047A1B76F792002AEACC /* SJAssetPickerViewController */,
+			);
+			path = SJAssetPicker;
+			sourceTree = "<group>";
+		};
+		CFCD04721B76F792002AEACC /* SJAssetPickerModel */ = {
+			isa = PBXGroup;
+			children = (
+				CFCD04731B76F792002AEACC /* SJAssetPickerModel.h */,
+				CFCD04741B76F792002AEACC /* SJAssetPickerModel.m */,
+			);
+			path = SJAssetPickerModel;
+			sourceTree = "<group>";
+		};
+		CFCD04751B76F792002AEACC /* SJAssetPickerResources */ = {
+			isa = PBXGroup;
+			children = (
+				CFCD04761B76F792002AEACC /* ic_img_check_sel@2x.png */,
+				CFCD04771B76F792002AEACC /* ic_img_check_sel@3x.png */,
+			);
+			path = SJAssetPickerResources;
+			sourceTree = "<group>";
+		};
+		CFCD04781B76F792002AEACC /* SJAssetPickerStoryboard */ = {
+			isa = PBXGroup;
+			children = (
+				CFCD04791B76F792002AEACC /* SJAssetPicker.storyboard */,
+			);
+			path = SJAssetPickerStoryboard;
+			sourceTree = "<group>";
+		};
+		CFCD047A1B76F792002AEACC /* SJAssetPickerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CFCD047B1B76F792002AEACC /* SJAssetGroupsTableViewController.h */,
+				CFCD047C1B76F792002AEACC /* SJAssetGroupsTableViewController.m */,
+				CFCD047D1B76F792002AEACC /* SJAssetPickerViewController.h */,
+				CFCD047E1B76F792002AEACC /* SJAssetPickerViewController.m */,
+			);
+			path = SJAssetPickerViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,7 +263,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFCD04821B76F792002AEACC /* SJAssetPicker.storyboard in Resources */,
+				CFCD04801B76F792002AEACC /* ic_img_check_sel@2x.png in Resources */,
 				CFCD04571B76F774002AEACC /* Main.storyboard in Resources */,
+				CFCD04811B76F792002AEACC /* ic_img_check_sel@3x.png in Resources */,
 				CFCD045C1B76F774002AEACC /* LaunchScreen.xib in Resources */,
 				CFCD04591B76F774002AEACC /* Images.xcassets in Resources */,
 			);
@@ -219,9 +286,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFCD04841B76F792002AEACC /* SJAssetPickerViewController.m in Sources */,
 				CFCD04541B76F774002AEACC /* ViewController.m in Sources */,
+				CFCD04831B76F792002AEACC /* SJAssetGroupsTableViewController.m in Sources */,
 				CFCD04511B76F774002AEACC /* AppDelegate.m in Sources */,
 				CFCD044E1B76F774002AEACC /* main.m in Sources */,
+				CFCD047F1B76F792002AEACC /* SJAssetPickerModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
