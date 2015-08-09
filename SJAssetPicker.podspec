@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.author             = { "shejunzhou" => "965678322@qq.com" }
   s.platform     = :ios, "7.0"
   s.source       = { :git => "https://github.com/zhoushejun/SJAssetPicker.git", :tag => s.version }
-  s.source_files  = "SJAssetPicker", "SJAssetPicker/**/*.{h,m}"
-  s.resource  = "SJAssetPicker/SJAssetPickerResources/SJAssetPickerResources.xcassets"
+  s.source_files  = "Vendor/SJAssetPicker/**/*.{h,m}"
+  s.resource  = "Vendor/SJAssetPicker/SJAssetPickerResources/SJAssetPickerResources.xcassets"
   s.requires_arc = true
 end
