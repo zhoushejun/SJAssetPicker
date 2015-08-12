@@ -54,7 +54,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4SF-3v-DiG">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="4" id="veT-ha-sUo">
                                     <size key="itemSize" width="100" height="100"/>
@@ -99,16 +99,18 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
                         <constraints>
                             <constraint firstItem="4SF-3v-DiG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-64" id="Ce0-cf-8Rh"/>
                             <constraint firstItem="4SF-3v-DiG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Vpb-8O-JcS"/>
+                            <constraint firstItem="4SF-3v-DiG" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="bottom" id="q6p-H5-EqB"/>
                             <constraint firstAttribute="trailing" secondItem="4SF-3v-DiG" secondAttribute="trailing" id="r4P-4N-cKm"/>
-                            <constraint firstAttribute="bottom" secondItem="4SF-3v-DiG" secondAttribute="bottom" id="xj2-ec-u1H"/>
                         </constraints>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="Item" id="cXm-LE-8q2"/>
+                        <barButtonItem title="预览" id="qBY-5e-ZFY"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="ISq-jc-ZM7"/>
+                        <barButtonItem image="ic_img_check_sel" width="60" id="r9e-UN-fJ9"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Title" id="6p9-DM-Nrp">
                         <barButtonItem key="rightBarButtonItem" title="完成" id="JXZ-OG-7sy">
@@ -130,7 +132,7 @@
         <!--Navigation Controller-->
         <scene sceneID="uIt-Qv-eSY">
             <objects>
-                <navigationController storyboardIdentifier="SJAssetPickerNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="CFZ-eA-OQl" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SJAssetPickerNavigationController" automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="CFZ-eA-OQl" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="K4b-Ih-igq">
@@ -138,6 +140,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="cgX-61-ORh">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="bKL-23-EZ6" kind="relationship" relationship="rootViewController" id="RjA-0T-LV6"/>
                     </connections>
