@@ -14,13 +14,11 @@
 		CF8904BF1B47150E00C74E75 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF8904BD1B47150E00C74E75 /* LaunchScreen.xib */; };
 		CF8904CB1B47150E00C74E75 /* SJAssetPickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8904CA1B47150E00C74E75 /* SJAssetPickerTests.m */; };
 		CFFDDEDF1B61D410000C6E8F /* SJRootCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFDDEDE1B61D410000C6E8F /* SJRootCollectionViewController.m */; };
-		CFFDDEF11B61D427000C6E8F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = CFFDDEE21B61D427000C6E8F /* LICENSE */; };
 		CFFDDEF31B61D427000C6E8F /* SJAssetPickerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFDDEE61B61D427000C6E8F /* SJAssetPickerModel.m */; };
 		CFFDDEF41B61D427000C6E8F /* SJAssetPickerResources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFFDDEE81B61D427000C6E8F /* SJAssetPickerResources.xcassets */; };
 		CFFDDEF51B61D427000C6E8F /* SJAssetPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFFDDEEA1B61D427000C6E8F /* SJAssetPicker.storyboard */; };
 		CFFDDEF61B61D427000C6E8F /* SJAssetGroupsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFDDEED1B61D427000C6E8F /* SJAssetGroupsTableViewController.m */; };
 		CFFDDEF71B61D427000C6E8F /* SJAssetPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFFDDEEF1B61D427000C6E8F /* SJAssetPickerViewController.m */; };
-		CFFDDEF81B61D427000C6E8F /* SJAssetPicker.podspec in Resources */ = {isa = PBXBuildFile; fileRef = CFFDDEF01B61D427000C6E8F /* SJAssetPicker.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +45,6 @@
 		CF8904CA1B47150E00C74E75 /* SJAssetPickerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJAssetPickerTests.m; sourceTree = "<group>"; };
 		CFFDDEDD1B61D410000C6E8F /* SJRootCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJRootCollectionViewController.h; sourceTree = "<group>"; };
 		CFFDDEDE1B61D410000C6E8F /* SJRootCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJRootCollectionViewController.m; sourceTree = "<group>"; };
-		CFFDDEE21B61D427000C6E8F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		CFFDDEE51B61D427000C6E8F /* SJAssetPickerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJAssetPickerModel.h; sourceTree = "<group>"; };
 		CFFDDEE61B61D427000C6E8F /* SJAssetPickerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJAssetPickerModel.m; sourceTree = "<group>"; };
 		CFFDDEE81B61D427000C6E8F /* SJAssetPickerResources.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SJAssetPickerResources.xcassets; sourceTree = "<group>"; };
@@ -56,7 +53,6 @@
 		CFFDDEED1B61D427000C6E8F /* SJAssetGroupsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJAssetGroupsTableViewController.m; sourceTree = "<group>"; };
 		CFFDDEEE1B61D427000C6E8F /* SJAssetPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJAssetPickerViewController.h; sourceTree = "<group>"; };
 		CFFDDEEF1B61D427000C6E8F /* SJAssetPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJAssetPickerViewController.m; sourceTree = "<group>"; };
-		CFFDDEF01B61D427000C6E8F /* SJAssetPicker.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SJAssetPicker.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,7 +153,6 @@
 			isa = PBXGroup;
 			children = (
 				CFFDDEE11B61D427000C6E8F /* SJAssetPicker */,
-				CFFDDEF01B61D427000C6E8F /* SJAssetPicker.podspec */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -165,7 +160,6 @@
 		CFFDDEE11B61D427000C6E8F /* SJAssetPicker */ = {
 			isa = PBXGroup;
 			children = (
-				CFFDDEE21B61D427000C6E8F /* LICENSE */,
 				CFFDDEE41B61D427000C6E8F /* SJAssetPickerModel */,
 				CFFDDEE71B61D427000C6E8F /* SJAssetPickerResources */,
 				CFFDDEE91B61D427000C6E8F /* SJAssetPickerStoryboard */,
@@ -292,11 +286,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFFDDEF51B61D427000C6E8F /* SJAssetPicker.storyboard in Resources */,
-				CFFDDEF81B61D427000C6E8F /* SJAssetPicker.podspec in Resources */,
 				CF8904BA1B47150E00C74E75 /* Main.storyboard in Resources */,
 				CFFDDEF41B61D427000C6E8F /* SJAssetPickerResources.xcassets in Resources */,
 				CF8904BF1B47150E00C74E75 /* LaunchScreen.xib in Resources */,
-				CFFDDEF11B61D427000C6E8F /* LICENSE in Resources */,
 				CF8904BC1B47150E00C74E75 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

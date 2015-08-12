@@ -12,8 +12,14 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 
 #define kUpdateAssets @"UpdateAssets"
+/** @name 获取屏幕 宽度、高度 及 状态栏 高度 */
+// @{
+#define kSJ_SCREEN_WIDTH  ([UIScreen mainScreen].bounds.size.width)
+#define kSJ_SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+// @}end of 获取屏幕 宽度、高度 及 状态栏 高度
 
-@interface SJAssetPickerViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
+
+@interface SJAssetPickerViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) SJAssetPickerModel *model;                ///< 读取相册model
 @property (nonatomic, strong) NSMutableArray *assetsArray;              ///< 当前相册文件夹下的所有照片源
@@ -100,6 +106,25 @@
     [collectionView reloadData];
     NSLog(@"%@", [result defaultRepresentation].url.description);
 }
+
+#pragma mark - UICollectionViewDelegateFlowLayout
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake((kSJ_SCREEN_WIDTH-4)/4.0, (kSJ_SCREEN_WIDTH-4)/4.0);
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    return UIEdgeInsetsMake(0, 0, 0, 0);
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    return 1.0f;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    return 0.0f;
+}
+
 
 -(void)loadAllPictures{
     
