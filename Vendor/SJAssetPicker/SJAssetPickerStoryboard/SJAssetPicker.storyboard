@@ -98,31 +98,64 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="dYk-Ec-UKR"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ak5-tM-fIW">
+                                <rect key="frame" x="0.0" y="436" width="88" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="3Fh-x2-5Zx"/>
+                                    <constraint firstAttribute="width" constant="88" id="q28-nJ-lS1"/>
+                                </constraints>
+                                <state key="normal" title="预览">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedPreviewButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XBw-Vo-VfC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIf-le-iiN">
+                                <rect key="frame" x="198" y="441" width="106" height="34"/>
+                                <color key="backgroundColor" red="0.1450980392" green="0.76470588240000004" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="106" id="3Fy-eO-6Oy"/>
+                                    <constraint firstAttribute="height" constant="34" id="PAL-wt-sLT"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="确定">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tappedOKButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eoe-Xf-xhz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="HIf-le-iiN" secondAttribute="trailing" constant="16" id="5iH-9w-Xjf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HIf-le-iiN" secondAttribute="bottom" constant="5" id="7mz-bm-LvP"/>
                             <constraint firstItem="4SF-3v-DiG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-64" id="Ce0-cf-8Rh"/>
+                            <constraint firstItem="ak5-tM-fIW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Qlx-zV-AmP"/>
                             <constraint firstItem="4SF-3v-DiG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Vpb-8O-JcS"/>
-                            <constraint firstItem="4SF-3v-DiG" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="bottom" id="q6p-H5-EqB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ak5-tM-fIW" secondAttribute="bottom" id="mAG-Xv-7wa"/>
+                            <constraint firstItem="4SF-3v-DiG" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" constant="-44" id="q6p-H5-EqB"/>
                             <constraint firstAttribute="trailing" secondItem="4SF-3v-DiG" secondAttribute="trailing" id="r4P-4N-cKm"/>
                         </constraints>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="预览" id="qBY-5e-ZFY"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="ISq-jc-ZM7"/>
-                        <barButtonItem image="ic_img_check_sel" width="60" id="r9e-UN-fJ9"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Title" id="6p9-DM-Nrp">
-                        <barButtonItem key="rightBarButtonItem" title="完成" id="JXZ-OG-7sy">
+                        <barButtonItem key="rightBarButtonItem" title="取消" id="JXZ-OG-7sy">
                             <connections>
-                                <action selector="tappedFinishedItemAction:" destination="BYZ-38-t0r" id="kUl-Ru-9bi"/>
+                                <action selector="tappedCancelItemAction:" destination="BYZ-38-t0r" id="UXV-vl-h1u"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="4SF-3v-DiG" id="6on-gg-Glo"/>
+                        <outlet property="okButton" destination="HIf-le-iiN" id="sfR-ar-6wr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -132,7 +165,7 @@
         <!--Navigation Controller-->
         <scene sceneID="uIt-Qv-eSY">
             <objects>
-                <navigationController storyboardIdentifier="SJAssetPickerNavigationController" automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="CFZ-eA-OQl" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SJAssetPickerNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="CFZ-eA-OQl" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="K4b-Ih-igq">

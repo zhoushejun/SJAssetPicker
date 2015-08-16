@@ -25,6 +25,7 @@
 @property (nonatomic, strong) NSMutableArray *assetsArray;              ///< 当前相册文件夹下的所有照片源
 @property (nonatomic, strong) NSMutableArray *selectedAssetsURLString;  ///< 已勾选的照片的URL字符串
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UIButton *okButton;
 
 @end
 
@@ -155,11 +156,20 @@
                           failureBlock:^(NSError *error) {NSLog(@"There is an error");}];
 }
 
-- (IBAction)tappedFinishedItemAction:(id)sender {
+- (IBAction)tappedPreviewButtonAction:(id)sender {
+    NSLog(@"tappedPreviewButtonAction");
+}
+
+- (IBAction)tappedOKButtonAction:(id)sender {
     _model.selectedAssetsArray = [_model.selectedAssetsArrayTemp mutableCopy];
     [_model.selectedAssetsArrayTemp removeAllObjects];
     [[NSNotificationCenter defaultCenter] postNotificationName:kUpdateAssets object:_model.selectedAssetsArray];
 
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)tappedCancelItemAction:(id)sender {
+    [_model.selectedAssetsArrayTemp removeAllObjects];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
