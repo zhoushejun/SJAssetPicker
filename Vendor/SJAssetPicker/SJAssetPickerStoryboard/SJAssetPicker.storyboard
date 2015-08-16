@@ -109,6 +109,7 @@
                                 </state>
                                 <connections>
                                     <action selector="tappedPreviewButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XBw-Vo-VfC"/>
+                                    <action selector="tappedPreviewItemAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y1v-n8-EPT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIf-le-iiN">
@@ -156,6 +157,7 @@
                     <connections>
                         <outlet property="collectionView" destination="4SF-3v-DiG" id="6on-gg-Glo"/>
                         <outlet property="okButton" destination="HIf-le-iiN" id="sfR-ar-6wr"/>
+                        <outlet property="previewItem" destination="ak5-tM-fIW" id="61E-xH-sKU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -26,6 +26,7 @@
 @property (nonatomic, strong) NSMutableArray *selectedAssetsURLString;  ///< 已勾选的照片的URL字符串
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UIButton *okButton;
+@property (weak, nonatomic) IBOutlet UIButton *previewItem;
 
 @end
 
@@ -39,6 +40,7 @@
     _assetsArray = [[NSMutableArray alloc] init];
     _selectedAssetsURLString = [[NSMutableArray alloc] init];
     _model = [SJAssetPickerModel shareManager];
+    _previewItem.hidden = YES;
     for (ALAsset *result in _model.selectedAssetsArrayTemp) {
         [_selectedAssetsURLString addObject:[result defaultRepresentation].url.description];
     }
@@ -171,6 +173,10 @@
 - (IBAction)tappedCancelItemAction:(id)sender {
     [_model.selectedAssetsArrayTemp removeAllObjects];
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)tappedPreviewItemAction:(id)sender {
+    
 }
 
 @end
