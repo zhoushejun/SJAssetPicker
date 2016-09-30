@@ -82,10 +82,11 @@ static NSString * const SJCollectionViewAddCellReuseIdentifier = @"SJCollectionV
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == _arrayAssets.count) {
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SJAssetPicker" bundle:nil];
-        UINavigationController *groupsVC = [storyboard instantiateViewControllerWithIdentifier:@"SJAssetPickerNavigationController"];
-        
-        [self presentViewController:groupsVC animated:YES completion:nil];
+        if ([self isAuthorized]) {
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SJAssetPicker" bundle:nil];
+            UINavigationController *groupsVC = [storyboard instantiateViewControllerWithIdentifier:@"SJAssetPickerNavigationController"];
+            [self presentViewController:groupsVC animated:YES completion:nil];
+        }
     }
 }
 
@@ -95,5 +96,34 @@ static NSString * const SJCollectionViewAddCellReuseIdentifier = @"SJCollectionV
     _arrayAssets = [[NSMutableArray alloc] initWithArray:notification.object];
     [self.collectionView reloadData];
 }
+
+#pragma mark - private
+
+- (BOOL)isAuthorized {
+    ALAuthorizationStatus authStatus = [ALAssetsLibrary authorizationStatus];
+    if (authStatus == ALAuthorizationStatusRestricted || authStatus == ALAuthorizationStatusDenied){//无权限
+        UIAlertAction *cancleAlertAction = [UIAlertAction actionWithTitle:@"拒绝" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            NSLog(@"点击拒绝");
+        }];
+        UIAlertAction *okAlertAction = [UIAlertAction actionWithTitle:@"去设置" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            NSLog(@"点击去设置");
+            NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+            if ([[UIApplication sharedApplication] canOpenURL:url]) {
+                [[UIApplication sharedApplication] openURL:url];
+            }
+        }];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"温馨提示"
+                                                                                 message:@"添加照片需要得到您的授权"
+                                                                          preferredStyle:UIAlertControllerStyleAlert];
+        [alertController addAction:cancleAlertAction];
+        [alertController addAction:okAlertAction];
+        UIWindow *win = [UIApplication sharedApplication].keyWindow;
+        [win.rootViewController presentViewController:alertController animated:YES completion:nil];
+        return NO;
+    }
+    
+    return YES;
+}
+
 
 @end
