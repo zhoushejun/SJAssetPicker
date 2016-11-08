@@ -9,9 +9,7 @@
 
 #import "SJAssetPickerViewController.h"
 #import "SJAssetPickerModel.h"
-#import <AssetsLibrary/AssetsLibrary.h>
 
-#define kUpdateAssets @"UpdateAssets"
 /** @name 获取屏幕 宽度、高度 及 状态栏 高度 */
 // @{
 #define kSJ_SCREEN_WIDTH  ([UIScreen mainScreen].bounds.size.width)
@@ -165,8 +163,7 @@
 - (IBAction)tappedOKButtonAction:(id)sender {
     _model.selectedAssetsArray = [_model.selectedAssetsArrayTemp mutableCopy];
     [_model.selectedAssetsArrayTemp removeAllObjects];
-    [[NSNotificationCenter defaultCenter] postNotificationName:kUpdateAssets object:_model.selectedAssetsArray];
-
+    [[SJAssetPickerManager shareManager] dismissViewControllerAnimated:_model.selectedAssetsArray];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

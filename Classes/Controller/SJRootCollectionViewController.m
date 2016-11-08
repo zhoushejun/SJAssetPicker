@@ -7,14 +7,11 @@
 //
 
 #import "SJRootCollectionViewController.h"
-#import "SJAssetGroupsTableViewController.h"
-#import <AssetsLibrary/AssetsLibrary.h>
-
-#define kUpdateAssets @"UpdateAssets"
+#import "SJAssetPickerManager.h"
 
 @interface SJRootCollectionViewController ()
 
-@property (nonatomic, strong) NSMutableArray *arrayAssets;
+@property (nonatomic, strong) NSMutableArray *arrayAssets; ///< 已选择的照片，界面展示的数据源
 
 @end
 
@@ -32,7 +29,6 @@ static NSString * const SJCollectionViewAddCellReuseIdentifier = @"SJCollectionV
     _arrayAssets = [[NSMutableArray alloc] init];
     
     // Do any additional setup after loading the view.
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(uploadAssets:) name:kUpdateAssets object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -82,48 +78,31 @@ static NSString * const SJCollectionViewAddCellReuseIdentifier = @"SJCollectionV
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == _arrayAssets.count) {
-        if ([self isAuthorized]) {
-            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SJAssetPicker" bundle:nil];
-            UINavigationController *groupsVC = [storyboard instantiateViewControllerWithIdentifier:@"SJAssetPickerNavigationController"];
-            [self presentViewController:groupsVC animated:YES completion:nil];
+        SJAssetPickerManager *assetPickerManager = [SJAssetPickerManager shareManager];
+        if ([assetPickerManager isAuthorized]) {
+            __weak typeof(self) weakSelf = self;
+            [assetPickerManager presentToViewController:self handler:^(NSArray *array) {
+                [weakSelf.arrayAssets removeAllObjects];
+                weakSelf.arrayAssets = [[NSMutableArray alloc] initWithArray:array];
+                [weakSelf.collectionView reloadData];
+            }];
         }
     }
-}
-
-- (void)uploadAssets:(NSNotification *)notification {
-    NSLog(@"notification:%@", notification);
-    [_arrayAssets removeAllObjects];
-    _arrayAssets = [[NSMutableArray alloc] initWithArray:notification.object];
-    [self.collectionView reloadData];
+    else {
+        __weak typeof(self) weakSelf = self;
+        [[SJAssetPickerManager shareManager] deleteSelectedAssetsIndex:indexPath.row completionHandler:^{
+            [weakSelf.arrayAssets removeObjectAtIndex:indexPath.row];
+            NSArray *paths = [NSArray arrayWithObject:[NSIndexPath indexPathForItem:indexPath.row inSection:indexPath.section]];
+            [weakSelf.collectionView performBatchUpdates:^{
+                [weakSelf.collectionView deleteItemsAtIndexPaths:paths];
+            } completion:^(BOOL finished) {
+                [weakSelf.collectionView reloadData];
+            }];
+        }];
+    }
 }
 
 #pragma mark - private
-
-- (BOOL)isAuthorized {
-    ALAuthorizationStatus authStatus = [ALAssetsLibrary authorizationStatus];
-    if (authStatus == ALAuthorizationStatusRestricted || authStatus == ALAuthorizationStatusDenied){//无权限
-        UIAlertAction *cancleAlertAction = [UIAlertAction actionWithTitle:@"拒绝" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            NSLog(@"点击拒绝");
-        }];
-        UIAlertAction *okAlertAction = [UIAlertAction actionWithTitle:@"去设置" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            NSLog(@"点击去设置");
-            NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
-            if ([[UIApplication sharedApplication] canOpenURL:url]) {
-                [[UIApplication sharedApplication] openURL:url];
-            }
-        }];
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"温馨提示"
-                                                                                 message:@"添加照片需要得到您的授权"
-                                                                          preferredStyle:UIAlertControllerStyleAlert];
-        [alertController addAction:cancleAlertAction];
-        [alertController addAction:okAlertAction];
-        UIWindow *win = [UIApplication sharedApplication].keyWindow;
-        [win.rootViewController presentViewController:alertController animated:YES completion:nil];
-        return NO;
-    }
-    
-    return YES;
-}
 
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18760AB51DCC859F00D0971E /* SJAssetPickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18760AB41DCC859F00D0971E /* SJAssetPickerManager.m */; };
 		CF8904B11B47150E00C74E75 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8904B01B47150E00C74E75 /* main.m */; };
 		CF8904B41B47150E00C74E75 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8904B31B47150E00C74E75 /* AppDelegate.m */; };
 		CF8904BA1B47150E00C74E75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF8904B81B47150E00C74E75 /* Main.storyboard */; };
@@ -32,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18760AB31DCC859F00D0971E /* SJAssetPickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJAssetPickerManager.h; sourceTree = "<group>"; };
+		18760AB41DCC859F00D0971E /* SJAssetPickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJAssetPickerManager.m; sourceTree = "<group>"; };
 		CF8904AB1B47150E00C74E75 /* SJAssetPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SJAssetPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF8904AF1B47150E00C74E75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF8904B01B47150E00C74E75 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -200,6 +203,8 @@
 				CFFDDEED1B61D427000C6E8F /* SJAssetGroupsTableViewController.m */,
 				CFFDDEEE1B61D427000C6E8F /* SJAssetPickerViewController.h */,
 				CFFDDEEF1B61D427000C6E8F /* SJAssetPickerViewController.m */,
+				18760AB31DCC859F00D0971E /* SJAssetPickerManager.h */,
+				18760AB41DCC859F00D0971E /* SJAssetPickerManager.m */,
 			);
 			path = SJAssetPickerViewController;
 			sourceTree = "<group>";
@@ -309,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFFDDEDF1B61D410000C6E8F /* SJRootCollectionViewController.m in Sources */,
+				18760AB51DCC859F00D0971E /* SJAssetPickerManager.m in Sources */,
 				CF8904B41B47150E00C74E75 /* AppDelegate.m in Sources */,
 				CFFDDEF71B61D427000C6E8F /* SJAssetPickerViewController.m in Sources */,
 				CF8904B11B47150E00C74E75 /* main.m in Sources */,

@@ -8,7 +8,6 @@
 
 #import "SJAssetGroupsTableViewController.h"
 #import "SJAssetPickerViewController.h"
-#import <AssetsLibrary/AssetsLibrary.h>
 #import "SJAssetPickerModel.h"
 
 @interface SJAssetGroupsTableViewController ()

@@ -29,4 +29,15 @@
     return self;
 }
 
+- (void)deleteSelectedAssetsIndex:(NSInteger)index {
+    if (index < [_selectedAssetsArray count]) {
+        [_selectedAssetsArray removeObjectAtIndex:index];
+    }
+    
+    if ([_selectedAssetsArray count] == 0) {
+        [_selectedAssetsArray removeAllObjects];
+        [_selectedAssetsArrayTemp removeAllObjects];
+    }
+}
+
 @end
