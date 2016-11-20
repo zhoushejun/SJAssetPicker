@@ -20,8 +20,5 @@
  */
 @interface SJAssetPickerViewController : UIViewController
 
-@property (nonatomic, strong) NSString *groupName;
-
-
 
 @end

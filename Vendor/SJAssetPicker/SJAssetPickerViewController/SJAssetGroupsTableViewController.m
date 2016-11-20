@@ -71,7 +71,6 @@
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SJAssetPicker" bundle:nil];
     SJAssetPickerViewController *VC = [storyboard instantiateViewControllerWithIdentifier:@"SJAssetPickerViewController"];
-    //    VC.groupName = groupName;
     VC.title = groupName;
     [self.navigationController pushViewController:VC animated:YES];
 }
