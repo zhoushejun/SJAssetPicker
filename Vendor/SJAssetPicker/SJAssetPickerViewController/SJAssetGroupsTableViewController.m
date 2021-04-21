@@ -81,7 +81,9 @@
         if(group != nil) {
             NSString *strName = [NSString stringWithFormat:@"%@", [group valueForProperty:@"ALAssetsGroupPropertyName"]];
             UIImage *img = [UIImage imageWithCGImage:[group posterImage]];
-            
+            if (!img) {
+                return;
+            }
             NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
             [dic setObject:strName  forKey:@"name"];
             [dic setObject:img      forKey:@"image"];
